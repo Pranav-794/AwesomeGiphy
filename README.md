@@ -8,6 +8,8 @@ Features:
   - User can select a previously searched term
 - Giphy - User can scroll through Giphy list
 - Pagination - User can paginate between page results.
+- Uses Giphy API
+- Typescript
 
 # How to run the app:
 
