@@ -27,8 +27,10 @@ fi
 
 hash1=$(git rev-parse --verify "origin/"${master_branch})
 hash2=$(git rev-parse --verify "origin/"${feature_branch})
-[[ hash1 = hash2 ]]
-if [[ $? = 1 ]]; then 
+echo $hash1
+echo $hash2
+hash_match=$([[ hash1 = hash2 ]])
+if [[ hash_match = 1 ]]; then 
 	printf "$master_branch is out of sync with $feature_branch. Please update your $master_branch branch"; exit 1
 fi
 
